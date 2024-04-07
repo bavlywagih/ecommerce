@@ -15,7 +15,7 @@ include $template . "Header/Header.php";
         <div class="content d-table-cell align-middle">
             <h3>Login</h3>
             <hr/>
-            <form>
+            <form action="<?php  echo  "Includes/Post/Login/LoginPost.php" ?>" method="post">
                 <div class="form-group">
                     <div class="ps-1">
                         <label for="Email">
@@ -23,7 +23,7 @@ include $template . "Header/Header.php";
                             Email address
                         </label>
                     </div>
-                    <input type="email" class="form-control" id="Email" name="email" placeholder="Email" autocomplete="off">
+                    <input type="email" class="form-control" id="Email" name="Email" placeholder="Email" autocomplete="off">
                 </div>
                 <div class="form-group py-3">
                     <div class="ps-1">
@@ -32,7 +32,7 @@ include $template . "Header/Header.php";
                             Password
                         </label>
                     </div>
-                    <input type="password" class="form-control" id="Password" name="password" placeholder="Password" autocomplete="new-password">
+                    <input type="password" class="form-control" id="Password" name="Password" placeholder="Password" autocomplete="new-password">
                 </div>
                 <div class="d-flex justify-content-center align-items-center btn btn-primary  ">
                     <i class="fa-solid fa-right-to-bracket"></i>    
