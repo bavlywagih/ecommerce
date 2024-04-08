@@ -1,14 +1,17 @@
 <?php
-include "Includes/Connect/Conf.php";
 
     // routes
 
-    $template ='Includes/Templates/';
-    $language ='Includes/languages/';
+    $navbar ='Includes/Templates/Navbar/Navbar.php';
+    $English ='Includes/languages/English/English.php';
+    $Connect ='Includes/Connect/Conf.php';
+    $Header = "Includes/Templates/Header/Header.php";
 
     $css ='layout/Css/';
     $js = 'Layout/Js/';
 
+
+    
 
 
 

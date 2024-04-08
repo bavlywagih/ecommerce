@@ -1,14 +1,19 @@
 <?php 
 session_start();
 
+if (isset($_SESSION['Email'])) {
+    header ('location: pages/home/home.php');
+}
 
 ob_start(); 
     echo 'login-page';
  $title = ob_get_clean(); 
 
 include "Includes/Initialization/Init.php";
-include $language . "English/English.php";
-include $template . "Header/Header.php";
+include $Connect;
+include $navbar;
+include $Header;
+include $English;
 
 ?>
 
