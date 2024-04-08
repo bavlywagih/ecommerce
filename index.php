@@ -1,4 +1,7 @@
 <?php 
+session_start();
+
+
 ob_start(); 
     echo 'login-page';
  $title = ob_get_clean(); 
