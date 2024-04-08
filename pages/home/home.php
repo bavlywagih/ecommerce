@@ -3,6 +3,10 @@
 
     include "../../Includes/Initialization/Init.php";
     include '../../' .$Connect;
+
+    ob_start(); 
+        echo 'home-page';
+    $title = ob_get_clean(); 
     
     ob_start(); 
         echo '../../Layout/Css/All/All.css';
