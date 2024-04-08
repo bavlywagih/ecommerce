@@ -5,7 +5,7 @@
     include '../../' .$Connect;
 
     ob_start(); 
-        echo 'home-page';
+        echo 'home-page' ;
     $title = ob_get_clean(); 
     
     ob_start(); 
