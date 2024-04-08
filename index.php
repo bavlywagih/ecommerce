@@ -1,9 +1,19 @@
 <?php 
 session_start();
 
+$NoNavbar = '';
+
 if (isset($_SESSION['Email'])) {
     header ('location: pages/home/home.php');
 }
+
+ob_start(); 
+echo 'Layout/Css/All/All.css';
+$css = ob_get_clean(); 
+
+ob_start(); 
+echo 'Layout/Js/All/All.js';
+$js = ob_get_clean(); 
 
 ob_start(); 
     echo 'login-page';
@@ -11,7 +21,6 @@ ob_start();
 
 include "Includes/Initialization/Init.php";
 include $Connect;
-include $navbar;
 include $Header;
 include $English;
 
@@ -61,5 +70,5 @@ include $English;
 
 <?php
 
-include $template . "Footer/Footer.php";
+include $Footer;
 ?>
