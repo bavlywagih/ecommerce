@@ -1,6 +1,7 @@
-@import "../../css/Pages/Login.css";
-@import "../../css/FontAwesome/FontAwesome.min.css";
-@import "../../css/Bootstrap/Bootstrap.min.css";
+@import "../../Css/Pages/Home/Home.css";
+@import "../../Css/Pages/Login/Login.css";
+@import "../../Css/FontAwesome/FontAwesome.min.css";
+@import "../../Css/Bootstrap/Bootstrap.min.css";
 /* body{
     background-color: black;
 } */
