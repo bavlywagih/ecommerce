@@ -8,7 +8,7 @@
     <div class="collapse navbar-collapse navbar-justify-between"  id="collapsibleNavbar">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="#"> </a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Link</a>
@@ -19,7 +19,7 @@
     </ul>
     <ul class="navbar-nav">
         <li class="nav-item dropdown navbar-dropdown-margin-right" >
-          <a class="nav-link dropdown-toggle navbar-dropdown-margin-left"  href="#" role="button" data-bs-toggle="dropdown">Dropdown</a>
+          <a class="nav-link dropdown-toggle navbar-dropdown-margin-left"  href="#" role="button" data-bs-toggle="dropdown"><?php echo $lang['name']?></a>
           <ul class="dropdown-menu navbar-dropdown-margin-top ">
             <li><a class="dropdown-item" href="#">Link</a></li>
             <li><a class="dropdown-item" href="#">Another link</a></li>

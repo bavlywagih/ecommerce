@@ -1,5 +1,11 @@
 <?php
+
     session_start();
+
+    if (!isset($_SESSION['email'])) {
+        header ('location: ../../index.php');
+        exit();
+    }
 
     include "../../Includes/Initialization/Init.php";
     include '../../' .$Connect;
@@ -20,12 +26,8 @@
     include '../../' .$English;
     include '../../' .$navbar;
 
-    if (!isset($_SESSION['Email'])) {
-        header ('location: http://localhost/e-commerce%20shop/index.php');
-        exit();
-    }
-
-    echo $_SESSION['Email'] ;
+    echo "your Full Name is " . $_SESSION['fullname'] . " and your Arabic Full Name is " . $_SESSION['FullNameArabic'] . "and your group id " . $_SESSION['groupid'] . "and your trust status" . $_SESSION['truststatus'] . "and your red status" . $_SESSION['redstatus'] . "and youe email " . $_SESSION['email'];
 
     include '../../' . $Footer;
+
 ?>

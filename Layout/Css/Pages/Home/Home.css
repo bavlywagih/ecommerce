@@ -1,12 +1,12 @@
 .navbar-justify-between{
-    justify-content: space-between;
+    justify-content: space-between !important;
 }
 .navbar-dropdown-margin-left{
-    margin-left: 25;
+    margin-left: 52px !important;
 }
 .navbar-dropdown-margin-top{
-    margin-top: 11px;
+    margin-top: 11px !important;
 }
 .navbar-dropdown-margin-right{
-    margin-right: 51px;
+    margin-right: 51px !important;
 }
