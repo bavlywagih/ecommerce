@@ -15,7 +15,7 @@
     $css = ob_get_clean(); 
 
     ob_start(); 
-    echo 'Layout/Js/All/All.js';
+    echo 'Layout/js/All/All.js';
     $js = ob_get_clean(); 
 
 
