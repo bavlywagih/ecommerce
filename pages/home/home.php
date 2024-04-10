@@ -11,6 +11,10 @@
     include '../../' .$Connect;
 
     ob_start(); 
+        echo 'home' ;
+    $class = ob_get_clean(); 
+
+    ob_start(); 
         echo 'home-page' ;
     $title = ob_get_clean(); 
     
@@ -19,7 +23,7 @@
     $css = ob_get_clean(); 
     
     ob_start(); 
-        echo '../../Layout/Js/All/All.js';
+        echo '../../Layout/js/All/All.js';
     $js = ob_get_clean(); 
 
     include '../../' .$Header;
