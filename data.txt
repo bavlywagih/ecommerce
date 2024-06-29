@@ -1,3 +1,102 @@
 https://cssauthor.com/bootstrap-form-templates/
 https://stackblitz.com/run?file=index.html
 https://www.atlassian.com/git/tutorials/using-branches/git-checkout#:~:text=New%20branches,to%20switch%20to%20that%20branch.
+
+
+
+
+بالطبع، إليك ترجمة الكلمات:
+
+- saint: قديس
+- icon: أيقونة
+- cross: صليب
+- liturgy: ليتورجيا (طقس ديني)
+- bishop: أسقف
+- priest: كاهن
+- deacon: شماس
+- monk: راهب
+- nun: راهبة
+- cathedral: كاتدرائية
+- psalm: مزمور
+- gospel: إنجيل
+- apostle: رسول
+- martyr: شهيد
+- holy: مقدس
+- baptism: معمودية
+- chrismation: مسحة (طقس ديني)
+- eucharist: الإفخارستيا (العشاء الرباني)
+- orthodox: أرثوذكسي
+- vespers: صلاة الغروب
+- hymn: ترنيمة
+- fasting: صوم
+- pascha: الفصح (عيد القيامة)
+- nativity: الميلاد (عيد الميلاد)
+- trinity: الثالوث
+- resurrection: القيامة
+- ascension: الصعود
+- pentecost: عيد العنصرة
+- transfiguration: التجلي
+- annunciation: البشارة
+- theotokos: والدة الإله
+- iconostasis: حاجز الأيقونات
+- clergy: رجال الدين
+- divine: إلهي
+- sacrament: سر مقدس (سر من الأسرار المقدسة)
+
+يمكنك استخدام هذه الترجمات كقائمة للكلمات المسيحية الأرثوذكسية.
+
+
+
+
+
+
+
+     if(isset($_GET['error'])){
+        if($_GET['error'] == 'exists'){
+            if ($lang['Oops'] == 'Oops...'){
+                echo '
+                <script>
+                    Swal.fire({
+                    icon: "error", 
+                    title: "Oops...",
+                    text: "user is already exist",
+                    });
+                </script>
+            ';
+            }else{
+                echo '
+                <script>
+                    Swal.fire({
+                    icon: "error", 
+                    title: "عفوا ....",
+                    text: "اسم المستخدم موجود بالفعل",
+                    });
+                </script>
+            ';
+            }
+
+        }
+        if($_GET['error'] == 'empty'){
+
+            if ($lang['Oops'] == 'Oops...'){
+                echo '
+                <script>
+                    Swal.fire({
+                    icon: "error", 
+                    title: "Oops...",
+                    text: "Fields cannot be left empty .",
+                    });
+                </script>
+            ';
+            }else{
+                echo '
+                <script>
+                    Swal.fire({
+                    icon: "خطأ", 
+                    title: "عفوا ....",
+                    text: "لا يمكن ترك الخانات فارغة .",
+                    });
+                </script>
+            ';
+            }
+        }

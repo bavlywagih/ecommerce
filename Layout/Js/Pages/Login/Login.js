@@ -7,3 +7,5 @@ $(function name(params)  {
         $(this).attr('placeholder',$(this).attr('data-text'));
     });
 });
+
+
