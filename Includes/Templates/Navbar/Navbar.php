@@ -1,47 +1,84 @@
-
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#"><i class="fa-solid fa-shop"></i></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark" style="z-index: 10;">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#"><i class="fa-solid fa-shop"></i></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse navbar-justify-between"  id="collapsibleNavbar">
-                <ul class="navbar-nav">
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <?php if(isset($authname['name'])){ ?>
                     <li class="nav-item">
-                        <a class="nav-link <?php if($class == 'home') echo 'active'; ?>" href="#"> <?PHP echo $lang['home'] ?> </a>
+                        <a class="nav-link <?php if($class == 'home') echo 'active'; ?>" href="../../pages/home/home.php" data-translate="home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><?PHP echo $lang['categories'] ?></a>
+                        <a class="nav-link" href="../../pages/home/home.php" data-translate="...">...</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><?PHP echo $lang['items'] ?></a>
-                    </li>  
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><?PHP echo $lang['member'] ?></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><?PHP echo $lang['statistics'] ?></a>
-                    </li> 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><?PHP echo $lang['logs'] ?></a>
-                    </li>
-                </ul>
-                <ul class="navbar-nav">
-                    <li class="nav-item dropdown navbar-dropdown-margin-right" >
-                        <a class="nav-link dropdown-toggle navbar-dropdown-margin-left"  href="#" role="button" data-bs-toggle="dropdown"><?php echo $authname['name']?></a>
-                        <ul class="dropdown-menu navbar-dropdown-margin-top ">
-                            <li><a class="dropdown-item" href="#"><?PHP echo $lang['profile'] ?></a></li>
-                            <li><a class="dropdown-item" href="#"><?PHP echo $lang['edit'] ?></a></li>
-                            <li><a class="dropdown-item" href="#"><?PHP echo $lang['settings'] ?></a></li>
-                            <li><a class="dropdown-item" href="#"><?PHP echo $lang['logout'] ?></a></li>
+                <?php } ?>
+            </ul>
+            <ul class="navbar-nav ms-auto">
+                <?php if(isset($authname['name'])){ ?>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <?php echo $authname["name"]; ?>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" data-translate="profile">Profile</a></li>
+                            <li><a class="dropdown-item" href="#" data-translate="edit">Edit Profile</a></li>
+                            <li><a class="dropdown-item" href="#" data-translate="settings">Settings</a></li>
+                            <li><a class="dropdown-item" href="../../logout/logout.php" data-translate="logout">Logout</a></li>
                         </ul>
                     </li>
-                </ul>       
-            </div>
+                <?php } else { ?>
+                    <li class="nav-item">
+                        <a class="nav-link <?php if($class == 'signup') echo 'active'; ?>" href="signup.php" data-translate="Signup">Signup</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link <?php if($class == 'login') echo 'active'; ?>" href="index.php" data-translate="login">Login</a>
+                    </li>
+                <?php } ?>
+                <li class="nav-item">
+                    <button class="btn btn-secondary" id="toggleLanguageButton">Toggle Language</button>
+                </li>
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
 
-<div class="container-fluid mt-3">
-  <h3>Navbar With Dropdown</h3>
-  <p>This example adds a dropdown menu in the navbar.</p>
-</div>
+<script>
+    function loadLanguageScript(language) {
+        const script = document.createElement('script');
+        script.src = `Layout/js/All/${language}.js`;
+        document.head.appendChild(script);
+
+        script.onload = function() {
+            const lang = language === 'en' ? langEn : langAr;
+            applyTranslations(lang);
+        };
+    }
+
+    function applyTranslations(lang) {
+        document.querySelectorAll('[data-translate]').forEach(element => {
+            const key = element.getAttribute('data-translate');
+            element.textContent = lang[key];
+        });
+    }
+
+    // التحقق من اللغة في localStorage وتحميل الملف المناسب
+    const language = localStorage.getItem('lang') || 'en';
+    loadLanguageScript(language);
+
+    // دالة للتحقق من وجود اللغة في localStorage وتبديل اللغة
+    function toggleLanguage() {
+        let currentLanguage = localStorage.getItem('lang');
+
+        if (currentLanguage === 'en') {
+            localStorage.setItem('lang', 'ar');
+        } else {
+            localStorage.setItem('lang', 'en');
+        }
+
+        location.reload();
+    }
+
+    document.getElementById('toggleLanguageButton').addEventListener('click', toggleLanguage);
+</script>

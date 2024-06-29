@@ -17,11 +17,11 @@
     ob_start(); 
         echo 'home-page' ;
     $title = ob_get_clean(); 
-    
+
     ob_start(); 
         echo '../../Layout/Css/All/All.css';
     $css = ob_get_clean(); 
-    
+
     ob_start(); 
         echo '../../Layout/js/All/All.js';
     $js = ob_get_clean(); 
@@ -29,11 +29,37 @@
     include '../../' .$Header;
     include '../../' .$English;
     include '../../' .$navbar;
-    echo "your Full Name is " . $_SESSION['fullname'] . " and your Arabic Full Name is " . $_SESSION['FullNameArabic'] . "and youe username " . $_SESSION['username'] . " and your group id = " .$_SESSION['groupid']  ;
+
+    $do ='';
+
+    if (isset($_GET['do'])) {
+
+        $do = $_GET['do'];
+
+    }
+    else{
+
+        $do = 'Manage';
+
+    }
+
+    if($do == 'Manage'){
+        include "../../Includes/pages/manage/manage.php";
+    }
+
+    elseif ($do == 'Add') {
+        echo 'you are in Add page';
+    }
+
+    elseif ($do == 'Insert') {
+        echo 'you are in Insert page';
+    }
+
+    else{
+        echo 'Error';
+    }
+
 
     include '../../' . $Footer;
 
 ?>
-<script>
-    localStorage.setItem('titel', 'homepage');
-</script>

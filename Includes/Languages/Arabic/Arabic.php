@@ -1,5 +1,5 @@
 <?php
-if (isset($_SESSION['email'])) {
+if (isset($_SESSION['username'])) {
     $name = explode(" ", $_SESSION['FullNameArabic']);
     $username = $name[0];
     $authname = array(
@@ -9,7 +9,11 @@ if (isset($_SESSION['email'])) {
 $lang = array(
     // start a login pages Arabic languages 
     'Login' => 'تسجيل الدخول',
-    'Email' => 'البريد الإلكتروني',
+    'signin' => 'انشاءحساب',
+    'username' => 'اسم المستخدم',
+    'fullname' => ' اسم المستخدم كامل',
+    'FullNameArabic' => '  اسم المستخدم كامل بالعربي',
+    'user-name-inform-input' => 'لا يمكن التعديل علي اسم المستخدم ويجب الاحتفاظ به لانه المطلوب في تسجيل الدخول .',
     'Password' => 'كلمة المرور',
     'Signup' => 'انشاء حساب',
     'Reset' => 'إعادة تعيين كلمة المرور',
@@ -28,6 +32,8 @@ $lang = array(
     'edit' => 'تعديل الملف الشخصي' ,    
     'settings' => 'إعدادات' ,    
     'logout' => 'تسجيل الخروج' ,    
+    'Signup' => 'انشاء حساب' ,    
+    'login' => 'تسجيل دخول' ,    
 
     // end   a navbar Arabic languages 
 );

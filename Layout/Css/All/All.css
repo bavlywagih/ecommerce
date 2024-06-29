@@ -1,7 +1,8 @@
 @import "../../Css/pages/Home/Home.css";
 @import "../../Css/pages/Login/Login.css";
+@import "../../Css/pages/signin/signin.css";
 @import "../../Css/FontAwesome/FontAwesome.min.css";
 @import "../../Css/Bootstrap/Bootstrap.min.css";
 /* body{
-    background-color: black;
+    background-color: rgba(255, 0, 0, 0.37);
 } */

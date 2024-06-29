@@ -1,0 +1,23 @@
+const langEn = {
+    'Login': 'Login',
+    'signin': 'signin',
+    'username': 'username',
+    'fullname': 'fullname',
+    'FullNameArabic': 'FullNameArabic',
+    'user-name-inform-input': 'Username cannot be modified and must be retained as it is required for login.',
+    'Password': 'Password',
+    'Oops': 'Oops...',
+    'Signup': 'Signup',
+    'Reset': 'Reset Password',
+    'home': 'Home',
+    'categories': 'Categories',
+    'items': 'Items',
+    'member': 'Member',
+    'statistics': 'Statistics',
+    'logs': 'Logs',
+    'profile': 'Profile',
+    'edit': 'Edit Profile',
+    'settings': 'Settings',
+    'logout': 'Logout',
+    'login': 'login'
+};

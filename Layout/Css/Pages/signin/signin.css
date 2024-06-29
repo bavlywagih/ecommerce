@@ -1,0 +1,45 @@
+.weak { color: white; }
+.medium { color: black; }
+.strong { color: green; }
+
+.password-strength-container {
+    width: 300px;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+}
+
+.password-strength-bar {
+    height: 26px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+#password-strength {
+    text-align: center;
+}
+
+.password-strength {
+    height: 100%;
+    transition: width 0.3s ease-in-out;
+}
+
+.password-strength-text {
+    margin-top: 5px;
+    font-size: 14px;
+    text-align: center;
+    color: #666;
+}
+
+.weak {
+    background-color: #ff4d4d;
+}
+
+.medium {
+    background-color: #ffd633;
+}
+
+.strong {
+    background-color: #66ff66;
+}
